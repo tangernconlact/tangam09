@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XAMAN Consulting & Coaching | Professional Growth Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #2563eb;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #2563eb, #4f46e5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        @media (max-width: 768px) {
+            .mobile-text-center {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold gradient-text">XAMAN</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#testimonials" class="nav-link text-gray-700 hover:text-blue-600">Testimonials</a>
+                    <a href="#pricing" class="nav-link text-gray-700 hover:text-blue-600">Pricing</a>
+                    <a href="#gallery" class="nav-link text-gray-700 hover:text-blue-600">Gallery</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+                <button class="md:hidden text-gray-700" id="menuToggle">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex justify-between items-center mb-8">
+                <a href="#" class="text-2xl font-bold gradient-text">XAMAN</a>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <a href="#about" class="text-xl text-gray-700 hover:text-blue-600">About</a>
+                <a href="#services" class="text-xl text-gray-700 hover:text-blue-600">Services</a>
+                <a href="#testimonials" class="text-xl text-gray-700 hover:text-blue-600">Testimonials</a>
+                <a href="#pricing" class="text-xl text-gray-700 hover:text-blue-600">Pricing</a>
+                <a href="#gallery" class="text-xl text-gray-700 hover:text-blue-600">Gallery</a>
+                <a href="#contact" class="text-xl text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <section class="pt-32 pb-20 hero-pattern bg-gradient-to-br from-blue-600 to-indigo-700">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">XAMAN Consulting & Coaching</h1>
+            <p class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">Transform Your Business and Personal Growth Journey with Expert Guidance</p>
+            <a href="#contact" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-lg hover:shadow-xl">Get Started</a>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">About Us</h2>
+            <div class="max-w-4xl mx-auto text-gray-600 text-lg">
+                <p class="mb-8 leading-relaxed">At XAMAN Consulting & Coaching, we believe in empowering individuals and organizations to reach their full potential. Our team of experienced consultants and coaches brings decades of combined expertise in business strategy, personal development, and professional growth.</p>
+                <p class="leading-relaxed">We combine proven methodologies with innovative approaches to deliver transformative results for our clients. Our mission is to guide you through your journey of growth and success, whether you're looking to enhance your business performance or achieve personal excellence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-chart-line text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Business Strategy</h3>
+                    <p class="text-gray-600">Strategic planning, market analysis, and business development solutions.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-user-tie text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Executive Coaching</h3>
+                    <p class="text-gray-600">Leadership development and executive performance enhancement.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <i class="fas fa-lightbulb text-5xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-semibold mb-4">Personal Development</h3>
+                    <p class="text-gray-600">Career guidance and personal growth strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Client Testimonials</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg mb-6">"XAMAN's consulting services transformed our business strategy and helped us achieve unprecedented growth."</p>
+                    <p class="font-semibold text-gray-800">- Sarah Johnson, CEO TechCorp</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-600 text-lg mb-6">"The coaching sessions provided invaluable insights that helped me advance my career to new heights."</p>
+                    <p class="font-semibold text-gray-800">- Michael Chen, Marketing Director</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Our Packages</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">Starter</h3>
+                    <p class="text-4xl font-bold mb-6">$499<span class="text-lg text-gray-600">/month</span></p>
+                    <ul class="text-gray-600 mb-8 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            2 Coaching Sessions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Basic Strategy Review
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Email Support
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">Get Started</a>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 border-2 border-blue-600">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-blue-600 text-white px-4 py-1 rounded-full text-sm">Most Popular</div>
+                    <h3 class="text-2xl font-semibold mb-4">Professional</h3>
+                    <p class="text-4xl font-bold mb-6">$999<span class="text-lg text-gray-600">/month</span></p>
+                    <ul class="text-gray-600 mb-8 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            4 Coaching Sessions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Comprehensive Strategy
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Priority Support
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">Get Started</a>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+                    <p class="text-4xl font-bold mb-6">Custom</p>
+                    <ul class="text-gray-600 mb-8 space-y-4">
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Unlimited Sessions
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Full Strategy Suite
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            24/7 Support
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block text-center bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-300">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Our Gallery</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Business Meeting" class="w-full h-80 object-cover rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Team Collaboration" class="w-full h-80 object-cover rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="Office Space" class="w-full h-80 object-cover rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="Team Meeting" class="w-full h-80 object-cover rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="Business Strategy" class="w-full h-80 object-cover rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0" alt="Professional Development" class="w-full h-80 object-cover rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 gradient-text">Contact Us</h2>
+            <div class="max-w-2xl mx-auto">
+                <form action="mailto:contact@xamanconsulting.com" method="post" enctype="text/plain" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 mb-2 font-medium">Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 mb-2 font-medium">Email</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 mb-2 font-medium">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-blue-600 focus:ring-2 focus:ring-blue-200"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg hover:bg-blue-700 transition duration-300 font-semibold">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-3xl font-bold gradient-text mobile-text-center">XAMAN</h3>
+                    <p class="text-gray-400 mt-2">Consulting & Coaching</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>&copy; <span id="currentYear"></span> XAMAN Consulting & Coaching. All rights reserved.</p>
+                <a href="privacy-policy.html" class="text-gray-400 hover:text-white mt-2 inline-block">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = menuToggle.querySelector('i');
+        let isMenuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            mobileMenu.style.transform = isMenuOpen ? 'translateX(0)' : 'translateX(100%)';
+            document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+            
+            if (isMenuOpen) {
+                menuIcon.classList.remove('fa-bars');
+                menuIcon.classList.add('fa-times');
+            } else {
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.style.transform = 'translateX(100%)';
+                document.body.style.overflow = '';
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            });
+        });
+
+        document.addEventListener('click', (e) => {
+            if (isMenuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                isMenuOpen = false;
+                mobileMenu.style.transform = 'translateX(100%)';
+                document.body.style.overflow = '';
+                menuIcon.classList.remove('fa-times');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        const navbar = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.remove('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.add('shadow-sm');
+            }
+        });
+
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const isVisible = (elementTop < window.innerHeight) && (elementBottom >= 0);
+                
+                if (isVisible) {
+                    element.classList.add('opacity-100', 'translate-y-0');
+                    element.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        };
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('animate-on-scroll', 'opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+        });
+
+        animateOnScroll();
+
+        window.addEventListener('scroll', animateOnScroll);
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const message = document.getElementById('message').value;
+
+                if (!name || !email || !message) {
+                    alert('Please fill in all fields');
+                    return;
+                }
+
+                if (!isValidEmail(email)) {
+                    alert('Please enter a valid email address');
+                    return;
+                }
+
+                contactForm.submit();
+            });
+        }
+
+        function isValidEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+
+        const galleryImages = document.querySelectorAll('#gallery img');
+        galleryImages.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.05)';
+                img.style.transition = 'transform 0.3s ease';
+            });
+            img.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
